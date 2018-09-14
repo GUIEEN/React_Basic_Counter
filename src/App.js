@@ -16,17 +16,15 @@ class App extends Component {
   constructor(props) {
     super(props)
     console.log('App - Constructor')
-    this.state = this.props.some
   }
 
   // perpect place to make Ajax calls to get data from the server
   componentDidMount() {
     // Ajax Call
-    this.setState({})
   }
 
   handleIncrement = counter => {
-    const counters = [...this.state.counters];
+    const counters = [...this.state.counters]; // 1 dimensional deep copy
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
     counters[index].value++;
